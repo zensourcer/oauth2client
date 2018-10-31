@@ -883,7 +883,7 @@ class OAuth2Credentials(Credentials):
                    invalid.
         """
         logger.info('Refreshing scopes')
-        query_params = {'access_token': token, 'fields': 'scope'}
+        query_params = {'access_token': token, 'field': 'scope'}
         token_info_uri = _helpers.update_query_params(
             self.token_info_uri, query_params)
         resp, content = transport.request(http, token_info_uri)
